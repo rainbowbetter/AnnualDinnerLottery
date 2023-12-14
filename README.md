@@ -4,5 +4,5 @@
 
 抽奖代码位于 js/moni.js 下，请Review.
 
-抽奖代码位于 js/member.js 下，FYI.
+抽奖名单位于 js/member.js 下，FYI.
 
