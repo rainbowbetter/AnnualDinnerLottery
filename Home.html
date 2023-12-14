@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>抽卡</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/Springframe.css">
+    <script src="js/jq.js"></script>
+    <script src="js/moni.js"></script>
+    <script src="js/member.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="kuangjia">
+        <!-- <img src="sucai/photos/kcbjyun.png" alt="" class="kcbjyun"> -->
+        <ul class="cardpool_nav">
+            <li onclick="setType(3)"></li>
+            <li onclick="setType(2)"></li>
+            <li onclick="setType(1)"></li>
+            <li onclick="setType(0)"></li>
+        </ul>
+        <div class="pinkball_kz">
+            <span class="pinkball"></span>
+            <img src="sucai/photos/pinkball.png" alt="">
+        </div>
+        <div class="yuanshi_kz">
+            <span class="yuanshi"></span>
+            <img src="sucai/photos/yuanshi.png" alt="">
+        </div>
+        <div class="cardpool">
+        </div>
+        <span class="btn3" onclick="initData()">初始化数据</span>
+        <span class="btn2">抽卡记录</span>
+        <img src="sucai/photos/btn1.png" alt="" class="btn1">
+        <img src="sucai/photos/btn10.png" alt="" class="btn10">
+    </div>
+    <video class="" src="sucai/video/单抽出金.mp4" autoplay="autoplay" id="dhvideo"></video>
+    <div class="pass">跳 过</div>
+    <div class="result_bg">
+        <img src="sucai/photos/qiyuan/胡桃.png" alt="">
+        <div class="result_name" style="display: none;">原石</div>
+    </div>
+    <div class="changeyy" style="display: block;">
+        <div class="changeblock">
+            <div style="position: relative;margin-bottom: 20px;margin-top: 30px;">
+                <h1 style="text-align: center;">三等奖⭐⭐</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>名字</th>
+                            <th>奖品</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb3">
+                    </tbody>
+                </table>
+                <br>
+                <h1 style="text-align: center;color: #c0c0c0;">二等奖⭐⭐⭐</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>名字</th>
+                            <th>奖品</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb2">
+                    </tbody>
+                </table>
+                <br>
+                <h1 style="text-align: center;color: #CD7F32;">一等奖⭐⭐⭐⭐</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>名字</th>
+                            <th>奖品</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb1">
+                    </tbody>
+                </table>
+                <br>
+                <h1 style="text-align: center;color: #f50808;">特等奖⭐⭐⭐⭐⭐</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>名字</th>
+                            <th>奖品</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb0">
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button class="changetrue">导出</button>
+            <button class="changefalse" style="left: 35%">取消</button>
+        </div>
+    </div>
+</body>
+<style>
+    table {
+        width: 500px;
+        border-collapse: collapse;
+        border: 1px solid #999;
+        margin: 20px auto;
+    }
+
+    td,
+    th {
+        border: #999 1px solid;
+        background-color: #fff;
+        text-align: left;
+    }
+
+    thead tr {
+        height: 40px;
+        background-color: #ddd;
+    }
+</style>
+</html>
