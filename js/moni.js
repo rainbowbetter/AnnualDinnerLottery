@@ -306,6 +306,7 @@ function initPrize(){
 function getPrize(num){
     let prizes = JSON.parse(localStorage.getItem('prizes'));
     let list=prizes.filter(v=>v.selected===undefined && v.type===type);
+    shuffleArray(list);
     list = list.sort(()=>Math.random()-0.5).slice(0,num);
     for(var i=0;i<list.length;i++){
         for(var j=0;j<prizes.length;j++){
@@ -317,6 +318,13 @@ function getPrize(num){
     }
     localStorage.setItem('prizes', JSON.stringify(prizes))
     return list;
+}
+
+function shuffleArray(array){
+    for(let i=array.length-1;i>0;i--){
+        let j= Math.floor(Math.random()*(i+1));
+        [array[i],array[j]]=[array[j],array[i]]
+    }
 }
 
 function addPrizeToList(prizes,name,type,nums){
@@ -355,6 +363,7 @@ function setLastPinkBall(num){
 function generateAward(num){
     var memberList = JSON.parse(localStorage.getItem('memberList'));
     var list=memberList.filter(v=>v.type===undefined);
+    shuffleArray(list);
     list = list.sort(()=>Math.random()-0.5).slice(0,num);
     let prizes = getPrize(num)
     for(var i=0;i<list.length;i++){
